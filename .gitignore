@@ -1,0 +1,7 @@
+node_modules
+.env
+package-lock.json
+/dist
+/src/modules/get_mc/image.png
+/src/utils/image.png
+/src/config/get_mc/config.json
