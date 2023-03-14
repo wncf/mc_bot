@@ -1,0 +1,17 @@
+{
+  "main": {
+    "prefix": "#",
+    "bot_name": "小艾"
+  },
+  "servers": {
+    "512772656": [
+      {
+        "name": "default",
+        "alias": "2023",
+        "address": "dx.zhaomc.net",
+        "protocol": 340,
+        "startTime": "2023-03-13"
+      }
+    ]
+  }
+}
