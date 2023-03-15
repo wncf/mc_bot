@@ -33,13 +33,15 @@ export default (bot: BotType) => {
         const res = (await getMcServerInfo(address, protocol)) as McSever
         // 处理信息
         const mcInfoObj = new handelmcResultInfo(res, alias)
+        console.log('hellow url before');
         // 上传图片
-        // const { url } = await bot.uploadImage({ img: mcInfoObj.favicon })
+        const { url } = await bot.uploadImage({ img: mcInfoObj.favicon })
         // 发送消息
+        console.log('hellow url after');
         bot.sendMessage({
           group: groupId,
           message: new Message()
-            // .addImageUrl(url)
+            .addImageUrl(url)
             .addText(`${mcInfoObj.text}\n现在是开服的${countStartServerTime(startTime)}天`),
         })
       } catch (err) {
