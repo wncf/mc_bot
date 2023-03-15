@@ -3,7 +3,7 @@ import { powers } from '@/types/power.type'
 import { Middleware } from 'mirai-js'
 import { getMcConfig, Typeing } from '../utils/index'
 const mcConfig = getMcConfig()
-class textCommandFilter extends Middleware {
+class textCommandFilter extends Middleware<any> {
   constructor(Command: string) {
     super()
     this.textProcessor().use(async (data, next) => {
