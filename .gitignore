@@ -5,3 +5,4 @@ package-lock.json
 /src/modules/get_mc/image.png
 /src/utils/image.png
 /src/config/get_mc/config.json
+/coverage

@@ -10,7 +10,8 @@
     "test": "jest"
   },
   "devDependencies": {
-    "@types/jest": "^29.4.0",
+    "@babel/preset-typescript": "^7.21.0",
+    "@types/jest": "^29.5.0",
     "@types/node": "^18.14.6",
     "clean-webpack-plugin": "^4.0.0",
     "dotenv": "^16.0.3",
@@ -31,6 +32,8 @@
     "webpack-node-externals": "^3.0.0"
   },
   "dependencies": {
+    "@babel/core": "^7.21.3",
+    "@babel/preset-env": "^7.20.2",
     "dayjs": "^1.11.7",
     "mcping-js": "^1.5.0",
     "mirai-js": "^2.8.11",
