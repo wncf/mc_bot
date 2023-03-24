@@ -15,11 +15,11 @@ export default (bot: BotType) => {
         const res = (await getMcServerInfo(data.text)) as McSever
         // 组装信息
         const mcInfoObj = new handelmcResultInfo(res)
-        const { url } = await bot.uploadImage({ img: mcInfoObj.favicon })
+        // const { url } = await bot.uploadImage({ img: mcInfoObj.favicon })
         // 发送最终消息
         bot.sendMessage({
           group: groupId,
-          message: new Message().addImageUrl(url).addText(mcInfoObj.text),
+          message: new Message().addText(mcInfoObj.text),
         })
       } catch (err) {
         console.log(err)
