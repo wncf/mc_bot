@@ -12,6 +12,7 @@ import fs from 'fs'
 import path from 'path'
 import { messages } from '@/message/setting.message'
 import dayjs from 'dayjs'
+import { baseMc_server_icon } from '../../public/mc_server_icon'
 export const Typeing = (item: any): string => {
   return Object.prototype.toString.call(item).slice(8, -1).toLowerCase()
 }
@@ -84,8 +85,9 @@ export class handelmcResultInfo {
       const base64String = favicon.split(',')[1]
       this.favicon = Buffer.from(base64String, 'base64')
     } else {
-      // 无，使用本地文件buffer对象
-      this.favicon = fs.readFileSync(path.resolve('/public/mc_server_icon.png'))
+      // 无，使用本地文件base65对象
+      const base64String = baseMc_server_icon.split(',')[1]
+      this.favicon = Buffer.from(base64String, 'base64')
     }
   }
 }
